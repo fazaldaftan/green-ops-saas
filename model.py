@@ -12,7 +12,7 @@ class NetworkHardwareBridge:
     """The 'Southbound' interface to real hardware with safety interlocks"""
     def __init__(self, tower_ip="10.1.42.1"):
         self.tower_ip = tower_ip
-        self.hard_limit_db = -9.0 # ABSOLUTE BLACKOUT PROTECTION
+        self.hard_limit_db = -30.0 # ABSOLUTE BLACKOUT PROTECTION
 
     def send_power_command(self, target_db, is_live=False):
         """Sends command with a safety clamp to prevent -30dB scenarios"""
